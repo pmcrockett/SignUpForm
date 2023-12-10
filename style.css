@@ -1,0 +1,109 @@
+* {
+    margin: 0px;
+}
+
+:root {
+    --elem-left-margin: 32px;
+}
+
+.main-body {
+    display: flex;
+    background-color: red;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-pane {
+    background: no-repeat center/cover url(./resources/halie-west-25xggax4bSA-unsplash.jpg);
+    display: flex;
+    width: min(35%, 448px);
+    height: 512px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo-bar {
+    background-color: rgba(71, 71, 105, 0.7);
+    margin-top: 128px;
+    height: 128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-image {
+    height: 100px;
+    width: 50px;
+}
+
+.logo-footer-bar {
+    color: white;
+    text-align: center;
+}
+
+.text-pane {
+    background-color: rgb(0, 83, 0);
+    display: flex;
+    width: min(65%, 832px);
+    height: 512px;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.info-bar {
+    background-color: blue;
+    height: 33.3%;
+}
+
+.info-bar > p {
+    margin: 16px 64px 16px var(--elem-left-margin);
+}
+
+.form-pane {
+    background-color: rgb(90, 110, 90);
+    display: flex;
+    height: 66.6%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.form-bar {
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.button-bar {
+    background-color: yellow;
+    display: flex;
+    height: 100%;
+}
+
+.form-bar > p {
+    width: 100%;
+    height: fit-content;
+    margin: 16px 64px 16px var(--elem-left-margin);
+}
+
+.input-bar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.account-input {
+    width: 128px;
+    height: fit-content;
+}
+
+.input-div {
+    margin: 16px 5% 16px var(--elem-left-margin);
+    display: flex;
+    flex-direction: column;
+}
+
+.input-div > label {
+    font-size: x-small;
+}
