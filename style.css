@@ -4,6 +4,11 @@
 
 :root {
     --elem-left-margin: 32px;
+    --elem-top-margin: 12px;
+    --elem-bottom-margin: 8px;
+    --form-bg-col: white;
+    --text-bg-col: rgb(243, 243, 243);
+    --shadow: 0px 1px 5px 0px rgb(185, 185, 185);
 }
 
 .main-body {
@@ -44,7 +49,6 @@
 }
 
 .text-pane {
-    background-color: rgb(0, 83, 0);
     display: flex;
     width: min(65%, 832px);
     height: 512px;
@@ -53,39 +57,40 @@
 }
 
 .info-bar {
-    background-color: blue;
-    height: 33.3%;
+    background-color: var(--text-bg-col);
+    height: 50%;
 }
 
 .info-bar > p {
-    margin: 16px 64px 16px var(--elem-left-margin);
+    margin: var(--elem-top-margin) 64px var(--elem-bottom-margin) var(--elem-left-margin);
 }
 
 .form-pane {
-    background-color: rgb(90, 110, 90);
     display: flex;
-    height: 66.6%;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
 .form-bar {
-    background-color: bisque;
+    background-color: var(--form-bg-col);
     display: flex;
     flex-direction: column;
-    height: 100%;
+    box-shadow: var(--shadow);
+    z-index: 1;
+    padding-bottom: 24px;
 }
 
 .button-bar {
-    background-color: yellow;
+    background-color: var(--text-bg-col);
     display: flex;
+    flex-direction: column;
     height: 100%;
 }
 
 .form-bar > p {
     width: 100%;
     height: fit-content;
-    margin: 16px 64px 16px var(--elem-left-margin);
+    margin: var(--elem-top-margin) 64px var(--elem-bottom-margin) var(--elem-left-margin);
 }
 
 .input-bar {
@@ -95,15 +100,51 @@
 
 .account-input {
     width: 128px;
-    height: fit-content;
+    height: 1rem;
+}
+
+.account-input:hover {
+    box-shadow: var(--shadow);
 }
 
 .input-div {
-    margin: 16px 5% 16px var(--elem-left-margin);
+    margin: var(--elem-top-margin) 32px var(--elem-bottom-margin) var(--elem-left-margin);
     display: flex;
     flex-direction: column;
 }
 
 .input-div > label {
     font-size: x-small;
+}
+
+.submit-button {
+    width: 128px;
+    height: 32px;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 8px;
+    margin: var(--elem-top-margin) 32px var(--elem-bottom-margin) var(--elem-left-margin);
+    box-shadow: var(--shadow);
+}
+
+.submit-button:hover {
+    background-color: rgb(113, 240, 197);
+}
+
+.submit-button:active {
+    background-color: rgb(205, 255, 238);
+}
+
+.button-bar > p {
+    margin: 0px 32px var(--elem-bottom-margin) var(--elem-left-margin);
+}
+
+.input-bar > p {
+    width: 136px;
+    margin: var(--elem-top-margin) 32px var(--elem-bottom-margin) var(--elem-left-margin);
+}
+
+.required-text {
+    font-size: x-small;
+    margin: var(--elem-top-margin) 32px var(--elem-bottom-margin) 100px;
 }
