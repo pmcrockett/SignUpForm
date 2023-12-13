@@ -1,64 +1,136 @@
+@font-face {
+    font-family: lilita-one;
+    src: url(./resources/LilitaOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: lexend-deca;
+    src: url(./resources/LexendDeca-VariableFont_wght.ttf);
+}
+
+@media screen and (max-width: 900px) {
+    .logo-text {
+        letter-spacing: -19px;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        margin-bottom: 20px;
+    }
+    
+    .logo-bar {
+        margin-top: 32px;
+        width: max(96px, 25vw);
+        flex-direction: column;
+    }
+
+    .logo-pane {
+        width: max(96px, 25vw);
+    }
+}
+
+@media screen and (min-width: 901px) {
+    .logo-text {
+       letter-spacing: -4px;
+   }
+
+   .logo-bar {
+    margin-top: 128px;
+    width: min(35vw, 448px);
+    } 
+
+    .logo-pane {
+        width: min(35vw, 448px);
+    }
+}
+
 * {
     margin: 0px;
+}
+
+a:link {
+    color: var(--mushroom-light-col);
+}
+
+a:visited {
+    color: var(--logo-bar-col);
 }
 
 :root {
     --elem-left-margin: 32px;
     --elem-top-margin: 12px;
     --elem-bottom-margin: 8px;
-    --form-bg-col: white;
-    --text-bg-col: rgb(243, 243, 243);
-    --shadow: 0px 1px 5px 0px rgb(185, 185, 185);
+    /*--form-bg-col: white;
+    --text-bg-col: rgb(243, 243, 243);*/
+    --form-bg-col: #fff8ec;
+    --text-bg-col: #f1ffeb9f;
+    --mushroom-col: #e6cfaf;
+    --mushroom-dark-col: #cab69a;
+    --mushroom-light-col: #f5ddbb;
+    --logo-bar-col: #4f66479f;
+    --shadow: 0px 1px 5px 0px rgb(24, 24, 24);
 }
 
 .main-body {
+    font-family: lexend-deca, Arial, Helvetica, sans-serif;
     display: flex;
-    background-color: red;
-    width: 100vw;
-    height: 100vh;
+    background: no-repeat center/cover url(./resources/trees.jpg);
+    background-color: rgba(0, 0, 0, 0.658);
+    background-blend-mode: multiply;
+    min-width: min-content;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
 }
 
-.logo-pane {
-    background: no-repeat center/cover url(./resources/halie-west-25xggax4bSA-unsplash.jpg);
+.panes-body {
     display: flex;
-    width: min(35%, 448px);
-    height: 512px;
+    min-width: 128px;
+}
+
+.logo-pane {
+    background: no-repeat center/cover url(./resources/mushrooms2.jpg);
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: var(--shadow);
+    border-radius: 20px 0px 0px 20px;
 }
 
 .logo-bar {
-    background-color: rgba(71, 71, 105, 0.7);
-    margin-top: 128px;
-    height: 128px;
+    background-color: var(--logo-bar-col);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .logo-image {
-    height: 100px;
-    width: 50px;
+    height: 110px;
+    width: 100px;
+}
+
+.logo-text {
+    font-family: lilita-one, Arial, Helvetica, sans-serif;
+    color: var(--mushroom-col);
+    font-size: 40px;
 }
 
 .logo-footer-bar {
-    color: white;
+    color: var(--mushroom-col);
+    font-size: x-small;
     text-align: center;
 }
 
 .text-pane {
     display: flex;
-    width: min(65%, 832px);
-    height: 512px;
+    max-width: 832px;
     flex-direction: column;
     justify-content: space-evenly;
+    box-shadow: var(--shadow);
+    border-radius: 0px 20px 20px 0px;
 }
 
 .info-bar {
     background-color: var(--text-bg-col);
-    height: 50%;
+    border-radius: 0px 20px 0px 0px;
 }
 
 .info-bar > p {
@@ -84,11 +156,10 @@
     background-color: var(--text-bg-col);
     display: flex;
     flex-direction: column;
-    height: 100%;
+    border-radius: 0px 0px 20px 0px;
 }
 
 .form-bar > p {
-    width: 100%;
     height: fit-content;
     margin: var(--elem-top-margin) 64px var(--elem-bottom-margin) var(--elem-left-margin);
 }
@@ -99,7 +170,7 @@
 }
 
 .account-input {
-    width: 128px;
+    max-width: 128px;
     height: 1rem;
 }
 
@@ -118,9 +189,9 @@
 }
 
 .submit-button {
-    width: 128px;
+    max-width: 128px;
     height: 32px;
-    background-color: aquamarine;
+    background-color: var(--mushroom-col);
     border: none;
     border-radius: 8px;
     margin: var(--elem-top-margin) 32px var(--elem-bottom-margin) var(--elem-left-margin);
@@ -128,11 +199,11 @@
 }
 
 .submit-button:hover {
-    background-color: rgb(113, 240, 197);
+    background-color: var(--mushroom-light-col);
 }
 
 .submit-button:active {
-    background-color: rgb(205, 255, 238);
+    background-color: var(--mushroom-dark-col);
 }
 
 .button-bar > p {
